@@ -1,431 +1,33 @@
-%% bare_jrnl.tex
-%% V1.4b
-%% 2015/08/26
-%% by Michael Shell
-%% see http://www.michaelshell.org/
-%% for current contact information.
-%%
-%% This is a skeleton file demonstrating the use of IEEEtran.cls
-%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
-%% journal paper.
-%%
-%% Support sites:
-%% http://www.michaelshell.org/tex/ieeetran/
-%% http://www.ctan.org/pkg/ieeetran
-%% and
-%% http://www.ieee.org/
-
-%%*************************************************************************
-%% Legal Notice:
-%% This code is offered as-is without any warranty either expressed or
-%% implied; without even the implied warranty of MERCHANTABILITY or
-%% FITNESS FOR A PARTICULAR PURPOSE! 
-%% User assumes all risk.
-%% In no event shall the IEEE or any contributor to this code be liable for
-%% any damages or losses, including, but not limited to, incidental,
-%% consequential, or any other damages, resulting from the use or misuse
-%% of any information contained here.
-%%
-%% All comments are the opinions of their respective authors and are not
-%% necessarily endorsed by the IEEE.
-%%
-%% This work is distributed under the LaTeX Project Public License (LPPL)
-%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
-%% distributed and modified. A copy of the LPPL, version 1.3, is included
-%% in the base LaTeX documentation of all distributions of LaTeX released
-%% 2003/12/01 or later.
-%% Retain all contribution notices and credits.
-%% ** Modified files should be clearly indicated as such, including  **
-%% ** renaming them and changing author support contact information. **
-%%*************************************************************************
-
-
-% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
-% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
-% *** with production work. The IEEE's font choices and paper sizes can   ***
-% *** trigger bugs that do not appear when using other class files.       ***                          ***
-% The testflow support page is at:
-% http://www.michaelshell.org/tex/testflow/
-
-
-
-\documentclass[journal]{IEEEtran}
-%
-% If IEEEtran.cls has not been installed into the LaTeX system files,
-% manually specify the path to it like:
-% \documentclass[journal]{../sty/IEEEtran}
-
-
-
-
-
-% Some very useful LaTeX packages include:
-% (uncomment the ones you want to load)
-
-
-% *** MISC UTILITY PACKAGES ***
-%
-%\usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-%   % pdf code
-% \else
-%   % dvi code
-% \fi
-% The latest version of ifpdf.sty can be obtained from:
-% http://www.ctan.org/pkg/ifpdf
-% Also, note that IEEEtran.cls V1.7 and later provides a builtin
-% \ifCLASSINFOpdf conditional that works the same way.
-% When switching from latex to pdflatex and vice-versa, the compiler may
-% have to be run twice to clear warning/error messages.
-
-
-
-
-
-
-% *** CITATION PACKAGES ***
-%
-%\usepackage{cite}
-% cite.sty was written by Donald Arseneau
-% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
-% \cite{} output to follow that of the IEEE. Loading the cite package will
-% result in citation numbers being automatically sorted and properly
-% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
-% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
-% \cite will automatically add leading space, if needed. Use cite.sty's
-% noadjust option (cite.sty V3.8 and later) if you want to turn this off
-% such as if a citation ever needs to be enclosed in parenthesis.
-% cite.sty is already installed on most LaTeX systems. Be sure and use
-% version 5.0 (2009-03-20) and later if using hyperref.sty.
-% The latest version can be obtained at:
-% http://www.ctan.org/pkg/cite
-% The documentation is contained in the cite.sty file itself.
-
-
-
-
-
-
-% *** GRAPHICS RELATED PACKAGES ***
-%
-\ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
-  % declare the path(s) where your graphic files are
-  % \graphicspath{{../pdf/}{../jpeg/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
-\else
-  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
-  % will default to the driver specified in the system graphics.cfg if no
-  % driver is specified.
-  % \usepackage[dvips]{graphicx}
-  % declare the path(s) where your graphic files are
-  % \graphicspath{{../eps/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.eps}
-\fi
-% graphicx was written by David Carlisle and Sebastian Rahtz. It is
-% required if you want graphics, photos, etc. graphicx.sty is already
-% installed on most LaTeX systems. The latest version and documentation
-% can be obtained at: 
-% http://www.ctan.org/pkg/graphicx
-% Another good source of documentation is "Using Imported Graphics in
-% LaTeX2e" by Keith Reckdahl which can be found at:
-% http://www.ctan.org/pkg/epslatex
-%
-% latex, and pdflatex in dvi mode, support graphics in encapsulated
-% postscript (.eps) format. pdflatex in pdf mode supports graphics
-% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
-% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
-% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
-% which can result in "jaggedy"/blurry rendering of lines and letters as
-% well as large increases in file sizes.
-%
-% You can find documentation about the pdfTeX application at:
-% http://www.tug.org/applications/pdftex
-
-
-
-
-
-% *** MATH PACKAGES ***
-%
-%\usepackage{amsmath}
-% A popular package from the American Mathematical Society that provides
-% many useful and powerful commands for dealing with mathematics.
-%
-% Note that the amsmath package sets \interdisplaylinepenalty to 10000
-% thus preventing page breaks from occurring within multiline equations. Use:
-%\interdisplaylinepenalty=2500
-% after loading amsmath to restore such page breaks as IEEEtran.cls normally
-% does. amsmath.sty is already installed on most LaTeX systems. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/pkg/amsmath
-
-
-
-
-
-% *** SPECIALIZED LIST PACKAGES ***
-%
-%\usepackage{algorithmic}
-% algorithmic.sty was written by Peter Williams and Rogerio Brito.
-% This package provides an algorithmic environment fo describing algorithms.
-% You can use the algorithmic environment in-text or within a figure
-% environment to provide for a floating algorithm. Do NOT use the algorithm
-% floating environment provided by algorithm.sty (by the same authors) or
-% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
-% algorithm float types and packages that provide these will not provide
-% correct IEEE style captions. The latest version and documentation of
-% algorithmic.sty can be obtained at:
-% http://www.ctan.org/pkg/algorithms
-% Also of interest may be the (relatively newer and more customizable)
-% algorithmicx.sty package by Szasz Janos:
-% http://www.ctan.org/pkg/algorithmicx
-
-
-
-
-% *** ALIGNMENT PACKAGES ***
-%
-%\usepackage{array}
-% Frank Mittelbach's and David Carlisle's array.sty patches and improves
-% the standard LaTeX2e array and tabular environments to provide better
-% appearance and additional user controls. As the default LaTeX2e table
-% generation code is lacking to the point of almost being broken with
-% respect to the quality of the end results, all users are strongly
-% advised to use an enhanced (at the very least that provided by array.sty)
-% set of table tools. array.sty is already installed on most systems. The
-% latest version and documentation can be obtained at:
-% http://www.ctan.org/pkg/array
-
-
-% IEEEtran contains the IEEEeqnarray family of commands that can be used to
-% generate multiline equations as well as matrices, tables, etc., of high
-% quality.
-
-
-
-
-% *** SUBFIGURE PACKAGES ***
-%\ifCLASSOPTIONcompsoc
-%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
-%\else
-%  \usepackage[caption=false,font=footnotesize]{subfig}
-%\fi
-% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
-% for subfigure.sty, the latter of which is no longer maintained and is
-% incompatible with some LaTeX packages including fixltx2e. However,
-% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
-% which will override IEEEtran.cls' handling of captions and this will result
-% in non-IEEE style figure/table captions. To prevent this problem, be sure
-% and invoke subfig.sty's "caption=false" package option (available since
-% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
-% handling of captions.
-% Note that the Computer Society format requires a larger sans serif font
-% than the serif footnote size font used in traditional IEEE formatting
-% and thus the need to invoke different subfig.sty package options depending
-% on whether compsoc mode has been enabled.
-%
-% The latest version and documentation of subfig.sty can be obtained at:
-% http://www.ctan.org/pkg/subfig
-
-
-
-
-% *** FLOAT PACKAGES ***
-%
-%\usepackage{fixltx2e}
-% fixltx2e, the successor to the earlier fix2col.sty, was written by
-% Frank Mittelbach and David Carlisle. This package corrects a few problems
-% in the LaTeX2e kernel, the most notable of which is that in current
-% LaTeX2e releases, the ordering of single and double column floats is not
-% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
-% single column figure to be placed prior to an earlier double column
-% figure.
-% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
-% corrections already built into the system in which case a warning will
-% be issued if an attempt is made to load fixltx2e.sty as it is no longer
-% needed.
-% The latest version and documentation can be found at:
-% http://www.ctan.org/pkg/fixltx2e
-
-
-%\usepackage{stfloats}
-% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
-% the ability to do double column floats at the bottom of the page as well
-% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
-% LaTeX2e). It also provides a command:
-%\fnbelowfloat
-% to enable the placement of footnotes below bottom floats (the standard
-% LaTeX2e kernel puts them above bottom floats). This is an invasive package
-% which rewrites many portions of the LaTeX2e float routines. It may not work
-% with other packages that modify the LaTeX2e float routines. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/pkg/stfloats
-% Do not use the stfloats baselinefloat ability as the IEEE does not allow
-% \baselineskip to stretch. Authors submitting work to the IEEE should note
-% that the IEEE rarely uses double column equations and that authors should try
-% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
-% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
-% such ways.
-% Do not attempt to use stfloats with fixltx2e as they are incompatible.
-% Instead, use Morten Hogholm'a dblfloatfix which combines the features
-% of both fixltx2e and stfloats:
-%
-% \usepackage{dblfloatfix}
-% The latest version can be found at:
-% http://www.ctan.org/pkg/dblfloatfix
-
-
-
-
-%\ifCLASSOPTIONcaptionsoff
-%  \usepackage[nomarkers]{endfloat}
-% \let\MYoriglatexcaption\caption
-% \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
-%\fi
-% endfloat.sty was written by James Darrell McCauley, Jeff Goldberg and 
-% Axel Sommerfeldt. This package may be useful when used in conjunction with 
-% IEEEtran.cls'  captionsoff option. Some IEEE journals/societies require that
-% submissions have lists of figures/tables at the end of the paper and that
-% figures/tables without any captions are placed on a page by themselves at
-% the end of the document. If needed, the draftcls IEEEtran class option or
-% \CLASSINPUTbaselinestretch interface can be used to increase the line
-% spacing as well. Be sure and use the nomarkers option of endfloat to
-% prevent endfloat from "marking" where the figures would have been placed
-% in the text. The two hack lines of code above are a slight modification of
-% that suggested by in the endfloat docs (section 8.4.1) to ensure that
-% the full captions always appear in the list of figures/tables - even if
-% the user used the short optional argument of \caption[]{}.
-% IEEE papers do not typically make use of \caption[]'s optional argument,
-% so this should not be an issue. A similar trick can be used to disable
-% captions of packages such as subfig.sty that lack options to turn off
-% the subcaptions:
-% For subfig.sty:
-% \let\MYorigsubfloat\subfloat
-% \renewcommand{\subfloat}[2][\relax]{\MYorigsubfloat[]{#2}}
-% However, the above trick will not work if both optional arguments of
-% the \subfloat command are used. Furthermore, there needs to be a
-% description of each subfigure *somewhere* and endfloat does not add
-% subfigure captions to its list of figures. Thus, the best approach is to
-% avoid the use of subfigure captions (many IEEE journals avoid them anyway)
-% and instead reference/explain all the subfigures within the main caption.
-% The latest version of endfloat.sty and its documentation can obtained at:
-% http://www.ctan.org/pkg/endfloat
-%
-% The IEEEtran \ifCLASSOPTIONcaptionsoff conditional can also be used
-% later in the document, say, to conditionally put the References on a 
-% page by themselves.
-
-
-
-
-% *** PDF, URL AND HYPERLINK PACKAGES ***
-%
-%\usepackage{url}
-% url.sty was written by Donald Arseneau. It provides better support for
-% handling and breaking URLs. url.sty is already installed on most LaTeX
-% systems. The latest version and documentation can be obtained at:
-% http://www.ctan.org/pkg/url
-% Basically, \url{my_url_here}.
-
-
-
-
-% *** Do not adjust lengths that control margins, column widths, etc. ***
-% *** Do not use packages that alter fonts (such as pslatex).         ***
-% There should be no need to do such things with IEEEtran.cls V1.6 and later.
-% (Unless specifically asked to do so by the journal or conference you plan
-% to submit to, of course. )
-
-
-% correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
-
-
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
-%
-% paper title
-% Titles are generally capitalized except for words such as a, an, and, as,
-% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
-% not capitalized unless they are the first or last word of the title.
-% Linebreaks \\ can be used within to get better formatting as desired.
-% Do not put math or special symbols in the title.
-\title{Government AI Readiness Meta-Analysis for Latin America and the Caribbean}
-%
-%
-% author names and IEEE memberships
-% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
-% a structure at a ~ so this keeps an author's name from being broken across
-% two lines.
-% use \thanks{} to gain access to the first footnote area
-% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
-% was not built to handle multiple paragraphs
-%
 
-\author{Laura~Montoya,~\IEEEmembership{Member,~IEEE,}
-        and~Pablo~Rivas,~\IEEEmembership{Senior,~IEEE}% <-this % stops a space
-\thanks{M. Shell was with the Department
-of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
-GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
-\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
-\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+\title{Government AI Readiness Meta-Analysis\\for Latin America and the Caribbean 
+%\thanks{Identify applicable funding agency here. If none, delete this.}
+}
 
-% note the % following the last \IEEEmembership and also \thanks - 
-% these prevent an unwanted space from occurring between the last author name
-% and the end of the author line. i.e., if you had this:
-% 
-% \author{....lastname \thanks{...} \thanks{...} }
-%                     ^------------^------------^----Do not want these spaces!
-%
-% a space would be appended to the last name and could cause every name on that
-% line to be shifted left slightly. This is one of those "LaTeX things". For
-% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
-% "AB" then you have to do: "\textbf{A}\textbf{B}"
-% \thanks is no different in this regard, so shield the last } of each \thanks
-% that ends a line with a % and do not let a space in before the next \thanks.
-% Spaces after \IEEEmembership other than the last one are OK (and needed) as
-% you are supposed to have spaces between the names. For what it is worth,
-% this is a minor point as most people would not even notice if the said evil
-% space somehow managed to creep in.
+\author{\IEEEauthorblockN{Laura Montoya}
+\IEEEauthorblockA{\textit{Executive Director} \\
+\textit{Accel AI}\\
+San Francisco, California \\
+laura@accel.ai}
+\and
+\IEEEauthorblockN{Pablo Rivas,~\IEEEmembership{Senior,~IEEE}}
+\IEEEauthorblockA{\textit{Department of Computer Science} \\
+\textit{Marist College}\\
+Poughkeepsie, New York \\
+Pablo.Rivas@Marist.edu}
+}
 
-
-
-% The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
-{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
-% The only time the second header will appear is for the odd numbered pages
-% after the title page when using the twoside option.
-% 
-% *** Note that you probably will NOT want to include the author's ***
-% *** name in the headers of peer review papers.                   ***
-% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
-% you desire.
-
-
-
-
-% If you want to put a publisher's ID mark on the page you can do it like
-% this:
-%\IEEEpubid{0000--0000/00\$00.00~\copyright~2015 IEEE}
-% Remember, if you use this you must call \IEEEpubidadjcol in the second
-% column for its text to clear the IEEEpubid mark.
-
-
-
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
-
-
-
-
-% make the title area
 \maketitle
 
 % As a general rule, do not put math, special symbols or citations
@@ -441,123 +43,126 @@ IEEE, IEEEtran, journal, \LaTeX, paper, template.
 
 
 
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
-\IEEEpeerreviewmaketitle
-
-
-
 \section{Introduction}
-% The very first letter is a 2 line initial drop letter followed
-% by the rest of the first word in caps.
-% 
-% form to use if the first word consists of a single letter:
-% \IEEEPARstart{A}{demo} file is ....
-% 
-% form to use if you need the single drop letter followed by
-% normal text (unknown if ever used by the IEEE):
-% \IEEEPARstart{A}{}demo file is ....
-% 
-% Some journals put the first two words in caps:
-% \IEEEPARstart{T}{his demo} file is ....
-% 
-% Here we have the typical use of a "T" for an initial drop letter
-% and "HIS" in caps to complete the first word.
 
+\IEEEPARstart{E}{ach} country is only as prepared to take advantage of AI technology as it's government and citizens will allow. The US and China, have been leading the competition for the Global AI market, referred to recently as the ``new space race..., where world superpowers battle to define generations of technology to come'' \cite{gershgorn2018ai}. In 2017, China announced a three step plan to become a \$150 billion AI global leader by the year 2030 through investments in research, military, and smart cities. Despite \$10 billion in venture capital currently being funneled towards AI in Silicon Valley, the US has been losing ground, after cutbacks on funding for scientific research and tightening immigration restrictions by the Trump administration, researchers and startups have been opting for grants issued by China to fund the future of AI development \cite{mozur2017china}. But if this is happening in the U.S., then we are inevitably confronted with the question: where does that leave Latin American countries in such Global AI race?
 
-Government AI Readiness Meta-Analysis for Latin America and the Caribbean
+A recent analysis of Government AI readiness, led by Oxford Insights and the International Development Research Centre (IDRC) \cite{miller2019government}, listed no Latin American countries in their top 20 rankings citing three key challenges in harnessing the use of AI for the common good: policies, capacity, and adequate resources. They scored each country and territories governments according to their preparedness to use AI in the delivery of public services. They have stated these findings as ``...a timely reminder of the ongoing inequality around access to AI'' \cite{miller2019government}.
 
-Each country is only as prepared to take advantage of AI technology as it’s government and citizens will allow.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.5in]{air-rank-no-table}
+\caption{Latin American regional comparison geochart produced by LatinX in AI\texttrademark. Data source in \cite{miller2019government}. See Table \ref{tbl:ai-rank} for exact numbers.}
+\label{fig:ai-rank}
+\end{figure}
 
-The notion above reiterated extensively during the workshop, is easily reflected by the US and China who have been leading the competition for the Global AI market, referred to recently as the “new space race…, where world superpowers battle to define generations of technology to come”. In 2017, China announced a 3 step plan to become a \$150 billion AI global leader by the year 2030 through investments in research, military, and smart cities. Despite \$10 billion in venture capital currently being funneled towards AI in Silicon Valley, the US has been losing ground, after cutbacks on funding for scientific research and tightening immigration restrictions by the Trump administration, researchers and startups have been opting for grants issued by China to fund the future of AI development.
+\begin{table}[!t]
+\caption{Latin American regional comparison by country (first and third column) and AI readiness index (second and fourth column) from data in \cite{miller2019government}.}
+\label{tbl:ai-rank}
+\centering
+\begin{tabular}{|l|l||l|l|}
+\hline
+Mexico & 32 & Uruguay & 35 \\
+Chile & 39 & Brazil & 40 \\
+Colombia & 44 & Argentina & 51 \\
+Costa Rica & 66 & Panama & 69 \\ 
+Peru & 71 & Trinidad and Tobago & 73 \\
+Dominican Republic & 77 & Ecuador & 82 \\
+El Salvador & 85 & Jamaica & 87 \\     
+Bolivia & 89 & Honduras & 96 \\  
+Paraguay & 102 & Guatemala & 115 \\    
+Nicaragua & 117 & Bahamas & 133 \\     
+Venezuela & 134 & Barbados & 135 \\    
+Saint Kitts and Nevis & 142 & Dominica & 143 \\
+Antigua and Barbuda & 144 & Guyana & 145 \\    
+Saint Vincent and the Grenadines & 149 & Haiti & 150 \\
+Saint Lucia & 153 & Suriname & 155 \\
+Grenada & 164 & Belize & 171 \\
+Cuba & 172 & & \\
+\hline
+\end{tabular}
+\end{table}
 
-Where does that leave Latin American countries in the Global AI race?
-A recent analysis of Government AI readiness led by Oxford Insights and the IDRC listed no Latin American countries in their top 20 rankings citing three key challenges in harnessing the use of AI for the common good: policies, capacity, and adequate resources. They scored each country and territories governments according to their preparedness to use AI in the delivery of public services. They’ve stated these findings as…
-“…a timely reminder of the ongoing inequality around access to AI.”
-Latin American Region Comparison Geochart by LatinX in AI™, Data Source: Government AI Readiness Ranking by Oxford Insights and IDRC
-Despite not making the top 20, the governments of Mexico, Uruguay, Brazil, and Colombia ranked within the top 50 countries out of 194 globally. Mexico and Uruguay being the only two South American countries developing AI policies and strategies. Mexico’s strategy released in March 2018, “Towards an Artificial Intelligence (AI) Strategy in Mexico: Taking Advantage of the IA Revolution” was carried out by Oxford Insights, C-Minds, and commissioned by the British Embassy in Mexico. Uruguay opened a public consultation of Artificial Intelligence for the Digital Government on April 22nd, 2019 and has since updated its Digital 2020 Agenda.
+As can be seen in Fig. \ref{fig:ai-rank} and Table \ref{tbl:ai-rank}, despite not making the top 20, the governments of Mexico, Uruguay, Chile, Brazil, and Colombia ranked within the top 50 countries out of 194 globally. Mexico and Uruguay being the only two South American countries developing AI policies and strategies. Mexico's strategy released in March 2018 \cite{martinho2018mexico}, ``Towards an Artificial Intelligence (AI) Strategy in Mexico: Taking Advantage of the IA Revolution'' was carried out by Oxford Insights, C-Minds, and commissioned by the British Embassy in Mexico. Uruguay opened a public consultation of Artificial Intelligence for the Digital Government on April 22nd, 2019 \cite{uruguay2019inteligencia}, and has since updated its Digital 2020 Agenda \cite{uruguay2019agenda}. However, the rest of Latin American countries still need to make progress to accommodate for the AI revolution.
+
+In this work we present an overview of the key elements contributing to the current status of Latin American AI readiness. First, section X does this...
+%% come back to this and finish it after the paper is done.
+
+\section{Overview of The Current Ranking System}
+
 The ranking system created by Oxford and the IDRC, sums an average normalization of indexed metrics on a scale of 0–10, from sources including the UN, WEF, Global Open Data Index, World Bank, Gartner, Nesta, and Crunchbase, clustered under four high-level topics including:
 Governance--indicators include whether they had privacy laws in place and a forthcoming AI strategy
-Infrastructure and data--indicators include the availability of open sourced data, data capability within the government, and their government’s procurement of advanced technology products
+Infrastructure and data--indicators include the availability of open sourced data, data capability within the government, and their government's procurement of advanced technology products
 Skills and education--indicators include digital skills among the population, innovation capability by the private sector, and the number of registered AI startups
 Government and public services--indicators include government effectiveness, availability of digital public services, and the importance of ICTs to government vision of the future
 View an index of their data and ranking assessment here.
 Comparison table published by LatinX in AI™, Data Source: Government AI Readiness Ranking (0–10 scale) by Oxford Insights and IDRC
-The average ranking for Latin American countries according to their analysis is 3.682, not far behind the global average of 4.032. They concluded their analysis stating that “the way forward is still uncertain” and suggesting the development of ‘AI Centers’ by connecting their academic resources to public and private capital to improve networking and innovation, but also suggesting, until clear and ethical policies for AI have been developed, Latin American governments should heed the warnings of the Latin American Initiative for Open Data, which published a research report titled “Automating with Caution” in November 2018.
+The average ranking for Latin American countries according to their analysis is 3.682, not far behind the global average of 4.032. They concluded their analysis stating that ``the way forward is still uncertain'' and suggesting the development of ‘AI Centers' by connecting their academic resources to public and private capital to improve networking and innovation, but also suggesting, until clear and ethical policies for AI have been developed, Latin American governments should heed the warnings of the Latin American Initiative for Open Data, which published a research report titled ``Automating with Caution'' in November 2018.
 
 Examining LATAM AI Readiness Ranking against each Countries Economic Metrics
-At first glance, these rankings appear intuitive, but it was surprising to find they did not account for each countries population size, unemployment rate, income equality, household income, education index, or GDP. These metrics are far more telling of a government and it’s citizen’s ability to invest in or make use of new technology and it’s potential effects on the population. I’ve compared these values to better assess the real risks and potential for integrating artificial intelligence in Latin America.
+At first glance, these rankings appear intuitive, but it was surprising to find they did not account for each countries population size, unemployment rate, income equality, household income, education index, or GDP. These metrics are far more telling of a government and it's citizen's ability to invest in or make use of new technology and it's potential effects on the population. I've compared these values to better assess the real risks and potential for integrating artificial intelligence in Latin America.
 Unemployment Rate
-The unemployment rates, published by the International Monetary Fund, is the number of unemployed persons as a percentage of the total labor force sourced from the World Economic Outlook in 2019. Unemployment in developing countries is often telling of a countries economy but can also be an indicator of factors outside of a government’s control. Areas with conflict may see an increase in migration as refugees flee, causing unemployment rates to spike temporarily including in neighboring cities or countries.
+The unemployment rates, published by the International Monetary Fund, is the number of unemployed persons as a percentage of the total labor force sourced from the World Economic Outlook in 2019. Unemployment in developing countries is often telling of a countries economy but can also be an indicator of factors outside of a government's control. Areas with conflict may see an increase in migration as refugees flee, causing unemployment rates to spike temporarily including in neighboring cities or countries.
 Comparison chart by LatinX in AI™, Data sources: Government AI Readiness Index (Oxford \& IDRC), Unemployment Rate (IMF)
-This can be seen most clearly in Venezuela, where the unemployment rate has jumped from 6\% in 2015 to 44\% in 2019. “Venezuela’s fall is the single largest economic collapse outside of war in at least 45 years, economists say”, as described in the New York Times and the largest refugee crisis of all time in Latin America. In countries like Venezuela, which used to have a thriving economy largely based on petroleum export and manufacturing, the opportunities for incorporating Artificial Intelligence were endless. Unfortunately now, due to government mismanagement, extensive surveillance and biometric data collection (similar to China’s communist regime), coupled with hyperinflation, some say the countries economy may never recover.
-This disrupt has even led to some technologically savvy Venezuelan citizens to desperately turn to impersonate US citizen’s through virtual private servers (VPS)s’ on sites like Mechanical Turk where they end up undermining social science research in order to earn money to feed their families. Venezuelan citizen’s fleeing to neighboring countries like Colombia, Argentina, Chile, and Peru, have found opportunities in the local gig economies, working for companies like Rappi, an app based delivery service startup, which is thriving in part due to this influx of migrant workers. Rappi incorporates AI and machine learning techniques in every aspect of their service, their app not only offers food and groceries but also includes on-demand services ranging from personal training to healthcare to even withdrawing and delivering cash from an ATM.
+This can be seen most clearly in Venezuela, where the unemployment rate has jumped from 6\% in 2015 to 44\% in 2019. ``Venezuela's fall is the single largest economic collapse outside of war in at least 45 years, economists say'', as described in the New York Times and the largest refugee crisis of all time in Latin America. In countries like Venezuela, which used to have a thriving economy largely based on petroleum export and manufacturing, the opportunities for incorporating Artificial Intelligence were endless. Unfortunately now, due to government mismanagement, extensive surveillance and biometric data collection (similar to China's communist regime), coupled with hyperinflation, some say the countries economy may never recover.
+This disrupt has even led to some technologically savvy Venezuelan citizens to desperately turn to impersonate US citizen's through virtual private servers (VPS)s' on sites like Mechanical Turk where they end up undermining social science research in order to earn money to feed their families. Venezuelan citizen's fleeing to neighboring countries like Colombia, Argentina, Chile, and Peru, have found opportunities in the local gig economies, working for companies like Rappi, an app based delivery service startup, which is thriving in part due to this influx of migrant workers. Rappi incorporates AI and machine learning techniques in every aspect of their service, their app not only offers food and groceries but also includes on-demand services ranging from personal training to healthcare to even withdrawing and delivering cash from an ATM.
 Generally, unemployment rates in a country are a lagging indicator, often following economic distress or improvements and must also be adjusted for seasonal variability. Countries whose economic well-being relies upon a few industries without much room for future development may also show high unemployment rates accompanied by a low GDP per capita. Unemployment and Government AI Readiness are not directly correlated, but unemployment must be considered before implementing AI technology or automation.
-Cuba, which has a historically low unemployment rate, also has the lowest Government AI Readiness score out of all other Latin American countries, according to the Oxford and IDRC ratings. Cuba’s economy is owned and run by a dictatorship government where the state employ’s most of its labor force, sets price standards and controls the access to education, healthcare, and distribution of goods to its citizens. The Cuban government also controls investments in the region, stifling the potential for progress and innovation, although recent economic reforms led by Raúl Castro’s administration, have allowed over 400,000 citizens to sign up to be entrepreneurs.
-Cuba has also seen an increase in the availability of computers and mobile phones after legalization in 2008, as well as modernization of its telecommunications network, improving access to the internet. As outlined by the Lexington Institute, in their research titled, “Cuba goes digital”, \$473 million of foreign investment between 1995 and 2000 had given “Cuba the potential to become a Latin American leader in information technology” as “Cuba is incubating a group of enterprises that design and export advanced business and medical software products.” Anyone knowledgeable about AI technology would know that this could be a great opportunity for incorporating Machine Learning and Deep Learning techniques as solutions for training and deploying models “on the edge” through Android and iOS platforms. You can now take advantage of frameworks like TensorFlow Lite by Google, Core ML by Apple, or Caffe2Go by Facebook.
+Cuba, which has a historically low unemployment rate, also has the lowest Government AI Readiness score out of all other Latin American countries, according to the Oxford and IDRC ratings. Cuba's economy is owned and run by a dictatorship government where the state employ's most of its labor force, sets price standards and controls the access to education, healthcare, and distribution of goods to its citizens. The Cuban government also controls investments in the region, stifling the potential for progress and innovation, although recent economic reforms led by Raúl Castro's administration, have allowed over 400,000 citizens to sign up to be entrepreneurs.
+Cuba has also seen an increase in the availability of computers and mobile phones after legalization in 2008, as well as modernization of its telecommunications network, improving access to the internet. As outlined by the Lexington Institute, in their research titled, ``Cuba goes digital'', \$473 million of foreign investment between 1995 and 2000 had given ``Cuba the potential to become a Latin American leader in information technology'' as ``Cuba is incubating a group of enterprises that design and export advanced business and medical software products.'' Anyone knowledgeable about AI technology would know that this could be a great opportunity for incorporating Machine Learning and Deep Learning techniques as solutions for training and deploying models ``on the edge'' through Android and iOS platforms. You can now take advantage of frameworks like TensorFlow Lite by Google, Core ML by Apple, or Caffe2Go by Facebook.
 Government acceptance and funding of these technologies for its research institutions and enterprises would have to be sanctioned and appropriately regulated prior to implementation. Government and economic stability would also be needed to warrant investment in the region, unfortunately, large numbers of Cuban citizens have been fleeing the country due to food shortages, impacted by its close ties and oil trade agreements with Venezuela and amplified by travel sanctions imposed by the Trump administration.
 GDP PPP
-Examining each country’s ranking alongside the Gross Domestic Product per Capita Purchasing Power Parity (GDP PPP) will help us to better understand an individual’s ability to buy the same quantity of an item in different countries. Government agencies use this metric to compare the output of countries that use different exchange rates and it can be used to forecast future real exchange rates. The GDP PPP is calculated using differences in taxes, tariffs, transportation costs, import costs, and labor costs.
+Examining each country's ranking alongside the Gross Domestic Product per Capita Purchasing Power Parity (GDP PPP) will help us to better understand an individual's ability to buy the same quantity of an item in different countries. Government agencies use this metric to compare the output of countries that use different exchange rates and it can be used to forecast future real exchange rates. The GDP PPP is calculated using differences in taxes, tariffs, transportation costs, import costs, and labor costs.
 The GDP PPP data, published by the Central Intelligence Agency World Fact Book, compares each countries GDP on a purchasing power parity basis divided by population as of 1 July for the same year.
 Comparison chart by LatinX in AI™, Data sources: Government AI Readiness Index (Oxford \& IDRC), GDP-PPP and Population (CIA World Fact Book)
 Countries with high GDP PPP may not score highly on this Government AI Readiness index due to having a small population or specialized economy, lacking investment or opportunity for the high impact of technological innovation. This is the case for countries who rely heavily on tourism including Caribbean countries, the Bahamas, Barbados, Antigua and Barbuda, and Saint Kitts.
 While some countries with low GDP PPP rank higher on the Government AI Readiness Index thanks in part to a growing or diversified economy combined with technological skills and data protection policies. Ecuador, Peru, Colombia, Brazil, Costa Rica, and the Dominican Republic score above the global average of 4.032 on the Government AI Readiness Index but have historically low GDP PPP.
-Ecuador is the 8th largest economy in Latin America with its main industries being petroleum, food processing, textiles, wood products, chemicals —and it is also the world’s largest exporter of bananas. At a UN Summit in 2014, Ecuador was one of only five countries who called for a preemptive ban on fully autonomous weapons and in late 2017, in an effort to encourage investment in the region, the National Directorate for the Registration of Public Data in Ecuador (DINARDAP), began drafting the first Ecuadorian law which would implement regulations in order to protect public personal data. Despite these proclamations for privacy and protection, Ecuador has also implemented a nationwide surveillance and response system called ECU 911, funded by China, and making use of controversial facial recognition technology while promoting its benefits for enforcing traffic laws and reducing crime incidents.
+Ecuador is the 8th largest economy in Latin America with its main industries being petroleum, food processing, textiles, wood products, chemicals —and it is also the world's largest exporter of bananas. At a UN Summit in 2014, Ecuador was one of only five countries who called for a preemptive ban on fully autonomous weapons and in late 2017, in an effort to encourage investment in the region, the National Directorate for the Registration of Public Data in Ecuador (DINARDAP), began drafting the first Ecuadorian law which would implement regulations in order to protect public personal data. Despite these proclamations for privacy and protection, Ecuador has also implemented a nationwide surveillance and response system called ECU 911, funded by China, and making use of controversial facial recognition technology while promoting its benefits for enforcing traffic laws and reducing crime incidents.
 Colombia is the 4th largest economy in Latin America, and the fastest growing globally, following China, thanks to its most thriving sectors including construction, services, and agriculture. Its other main industries include textiles, food processing, oil, clothing and footwear, beverages, chemicals, cement, gold, coal, emeralds, shipbuilding, electronics industry, and home appliances. Colombia also has the fastest growing information technology industry in the world and the longest fiber optic network in Latin America, installed by Azteca Co. in 2013.
-While Colombia is lacking an official AI strategy, it has some of the most thorough data privacy laws in South America inspired by European data protection regulations. These laws and decrees, enacted between 2008 and 2014, protect its citizens by regulating the use of financial and commercial personal data in credit scoring, they also govern data processing, establish the rights of data subjects and duties of data controllers and processors, set forth requirements for international data transfers, created the National Registry of Databases and designates the Superintendence of Industry and Commerce (SIC) as the data protection authority. In 2018, the first Centre for Excellence in Artificial Intelligence was opened in Medellin, the country’s second largest city, as part of the Digital Americas Pipeline Initiative (DAPI), a collaboration between Ruta N, the center of business and innovation of Medellín and IRPA AI (The Institute for Robotic Process Automation and Artificial Intelligence).
-An analogy most often used to explain GDP PPP is the Big Mac Index, which compares the price of a Big Mac in different countries in order to illustrate currencies which may be under or overvalued in purchasing power as compared to the local exchange rate. For our purposes, it would be a fruitful undertaking to explore the difference in purchasing power for an AI product and the difference in cost to develop AI across countries, but an in-depth exploration of these questions would merit a write up of its own. We’ll use a simple proxy in the interim, the cost to hire AI researchers.
+While Colombia is lacking an official AI strategy, it has some of the most thorough data privacy laws in South America inspired by European data protection regulations. These laws and decrees, enacted between 2008 and 2014, protect its citizens by regulating the use of financial and commercial personal data in credit scoring, they also govern data processing, establish the rights of data subjects and duties of data controllers and processors, set forth requirements for international data transfers, created the National Registry of Databases and designates the Superintendence of Industry and Commerce (SIC) as the data protection authority. In 2018, the first Centre for Excellence in Artificial Intelligence was opened in Medellin, the country's second largest city, as part of the Digital Americas Pipeline Initiative (DAPI), a collaboration between Ruta N, the center of business and innovation of Medellín and IRPA AI (The Institute for Robotic Process Automation and Artificial Intelligence).
+An analogy most often used to explain GDP PPP is the Big Mac Index, which compares the price of a Big Mac in different countries in order to illustrate currencies which may be under or overvalued in purchasing power as compared to the local exchange rate. For our purposes, it would be a fruitful undertaking to explore the difference in purchasing power for an AI product and the difference in cost to develop AI across countries, but an in-depth exploration of these questions would merit a write up of its own. We'll use a simple proxy in the interim, the cost to hire AI researchers.
 Comparing the Cost to Hire an AI Researcher
-The cost to hire an AI Researcher is the most telling comparable metric that governments funding research and development would need to consider in the integration of AI into their policies, products, and services. In the US, salaries of software engineers, data scientists, and researchers skilled in artificial intelligence techniques range between \$100,000–\$150,000 according to PayScale. These averages increase in densely populated or competitive markets like New York and San Francisco. While highly credentialled and “well-known names in the A.I. field have received compensation in salary and shares in a company’s stock that total single- or double-digit millions over a four- or five-year period.”
+The cost to hire an AI Researcher is the most telling comparable metric that governments funding research and development would need to consider in the integration of AI into their policies, products, and services. In the US, salaries of software engineers, data scientists, and researchers skilled in artificial intelligence techniques range between \$100,000–\$150,000 according to PayScale. These averages increase in densely populated or competitive markets like New York and San Francisco. While highly credentialled and ``well-known names in the A.I. field have received compensation in salary and shares in a company's stock that total single- or double-digit millions over a four- or five-year period.''
 Alternatively, in Latin America, the cost to hire engineers and researchers is significantly lower ranging between \$15,000 and \$30,000 dependent on years of experience and specialization. According to a 2018 Latin American Developer Survey conducted by Stack Overflow, engineers with some experience in Machine Learning or Data Science still tend to receive higher compensation. Since the job title of Artificial Intelligence engineer and researcher is only beginning to gain popularity, this is the best available historical data to show the average compensation equivalencies by comparison.
-Source: “Hiring Developers in Latin America” by Julia Silge on Stack Overflow Business Journal
+Source: ``Hiring Developers in Latin America'' by Julia Silge on Stack Overflow Business Journal
 Education
 According to the Stack Overflow study, Latin American countries also seem to produce more academic researchers than general software engineers as compared to the rest of the world.
-Source: “Hiring Developers in Latin America” by Julia Silge on Stack Overflow Business Journal
+Source: ``Hiring Developers in Latin America'' by Julia Silge on Stack Overflow Business Journal
 While the Government AI Readiness Index by Oxford and the IDRC, account for technological skills, they do not look at the overall Education level of a country. The education index is an average of mean years of schooling (of adults) and expected years of schooling (of children), both expressed as an index obtained by scaling with the corresponding maxima. Published by the United Nations Development Program their calculations are developed from data by UNESCO Institute for Statistics (2018) and other sources.
 Comparison chart by LatinX in AI™, Data sources: Government AI Readiness Index (Oxford \& IDRC), Education Index (UNDP)
-While most Latin American countries rate highly on the education index, many Latin American and Caribbean governments do not invest enough in university research and development. This coupled with unattractive pay, prestige, and working conditions leads to “Brain Drain” where the highly skilled or educated leave their country of origin. This phenomenon makes it harder for Universities in those countries to reach their research potential and limits the access to quality scientific research mentors available to share knowledge to incoming students.
-A report from Americas Quarterly in 2014 cited data from Mexico’s National Council of Science and Technology indicating that 1,271 of the 4,559 Mexicans (28\%) working on master’s degrees or Ph.D.s abroad in 2012 were doing so in the US. That’s one of every 19 Mexicans with a bachelor’s degree or higher living in the US.
-In Argentina, scientists often strike to protest budget cuts to research and development. The directors of the National Scientific and Technical Research Council (CONICET), headquartered in Buenos Aires, which employs more than 20,000 researchers in hundreds of centers throughout the country are also fighting the cuts. They created a manifesto demanding “the immediate implementation of a plan to rescue CONICET.”
+While most Latin American countries rate highly on the education index, many Latin American and Caribbean governments do not invest enough in university research and development. This coupled with unattractive pay, prestige, and working conditions leads to ``Brain Drain'' where the highly skilled or educated leave their country of origin. This phenomenon makes it harder for Universities in those countries to reach their research potential and limits the access to quality scientific research mentors available to share knowledge to incoming students.
+A report from Americas Quarterly in 2014 cited data from Mexico's National Council of Science and Technology indicating that 1,271 of the 4,559 Mexicans (28\%) working on master's degrees or Ph.D.s abroad in 2012 were doing so in the US. That's one of every 19 Mexicans with a bachelor's degree or higher living in the US.
+In Argentina, scientists often strike to protest budget cuts to research and development. The directors of the National Scientific and Technical Research Council (CONICET), headquartered in Buenos Aires, which employs more than 20,000 researchers in hundreds of centers throughout the country are also fighting the cuts. They created a manifesto demanding ``the immediate implementation of a plan to rescue CONICET.''
 
 Latin American Automation Potential \& Risks
-All of these metrics can still only tell part of the story when it comes to a country and it’s citizen’s preparedness for Artificial Intelligence. You can’t predict an economies readiness for AI without including metrics for automation. Several reports have been published in the last five years by experts including the McKinsey Global Institute, the Economist Intelligence Unit, and the International Federation on Robotics, to name a few.
+All of these metrics can still only tell part of the story when it comes to a country and it's citizen's preparedness for Artificial Intelligence. You can't predict an economies readiness for AI without including metrics for automation. Several reports have been published in the last five years by experts including the McKinsey Global Institute, the Economist Intelligence Unit, and the International Federation on Robotics, to name a few.
 The International Federation of Robotics has been tracking and forecasting the rise of robot density globally for use in manufacturing and affiliated industries. In their 2018 Executive Summary on World Robotics, they noted that Mexico has become an important emerging market for industrial robots outpacing the rest of South America, including Brazil.
 International Federation of Robotics--2018 Industrial Robots Executive Summary
 The use of AI and automation applied to industries such as manufacturing and agriculture could help to leapfrog a developing countries economy. Countries with a growing young workforce could use these technologies to their advantage in furthering economic development with the right education.
-These days, manufacturing with robotics is no longer the largest concern when describing the automation potential and its effects on an economy. Shifts in business processes and software intelligence through automation of data collection and processing will have a larger impact, especially in Latin America. In 2017, the McKinsey Global Institute published its executive summary on “Harnessing automation for a future that works”.
+These days, manufacturing with robotics is no longer the largest concern when describing the automation potential and its effects on an economy. Shifts in business processes and software intelligence through automation of data collection and processing will have a larger impact, especially in Latin America. In 2017, the McKinsey Global Institute published its executive summary on ``Harnessing automation for a future that works''.
 McKinsey Global Institute--A future that works: Automation, employment, and productivity
-They’ve listed the countries where the potential for automation is highest by adapting current technologies. Of the Latin American countries they included in their study(countries with the largest population or high wages), Peru and Colombia have the highest automation potential at ≥53\%, Brazil, Mexico, and Costa Rica the next highest ≥ 50\% followed closely by Chile, Barbados, and Argentina ≥ 48\%.
+They've listed the countries where the potential for automation is highest by adapting current technologies. Of the Latin American countries they included in their study(countries with the largest population or high wages), Peru and Colombia have the highest automation potential at ≥53\%, Brazil, Mexico, and Costa Rica the next highest ≥ 50\% followed closely by Chile, Barbados, and Argentina ≥ 48\%.
 McKinsey Global Institute--A future that works: Automation, employment, and productivity
 Automation Readiness Index
-Meanwhile, the Economist Intelligence Unit developed their own Automation Readiness Index, accompanied by a white paper and executive summary titled “Who is ready for the coming wave of automation”. Their index, similarly to that of the IDRC and Oxford Insights, categorized metrics under 3 high-level topics including:
+Meanwhile, the Economist Intelligence Unit developed their own Automation Readiness Index, accompanied by a white paper and executive summary titled ``Who is ready for the coming wave of automation''. Their index, similarly to that of the IDRC and Oxford Insights, categorized metrics under 3 high-level topics including:
 Innovation Environment--including indicators for research and innovation, infrastructure, and ethics and safety.
 Education Policies--including indicators for basic education, post-compulsory education, continuous education, and learning environments.
 Labour Market Policies--including indicators for knowledge on automation and workforce transition programs.
 The Economist Intelligence Unit--Automation Readiness Index
-They conclude their report by comparing the global use of automation and AI technology to trial and error. Reinforcing the sentiment that “supporting basic research, clearing the way for start-ups and ensuring competitive markets are likely to be as helpful to AI and robotics innovation as they have been for past technology advances”…while, “policy directions for education systems and labor markets are less clear for the moment, as the effect of intelligent automation have yet to be widely felt”.
+They conclude their report by comparing the global use of automation and AI technology to trial and error. Reinforcing the sentiment that ``supporting basic research, clearing the way for start-ups and ensuring competitive markets are likely to be as helpful to AI and robotics innovation as they have been for past technology advances''...while, ``policy directions for education systems and labor markets are less clear for the moment, as the effect of intelligent automation have yet to be widely felt''.
 Incorporation of AI into industries through automation which currently relies on a large blue-collar workforce always leads to the concerns of increased unemployment, decreased GPD-PPP, increased migration, and population redistribution or density in city centers, gaps in education for highly technical skills, and increased income inequality between upper and lower class citizens. Most economists say these effects are temporary as the markets shifts and new jobs are developed to support the growth of AI economies, but governments will have to do their part in ensuring their citizens have access to education and opportunities for investment.
 
 How can AI help Latin American Governments and citizens?
-Rather than just stressing how AI can be misused by government entities for surveillance to perpetuate bias and corrupt political systems or how it may diminish the middle class and render a country’s lower class workers as unemployed, it is important to understand the benefits this technology can add to an ecosystem and economy when used responsibly.
+Rather than just stressing how AI can be misused by government entities for surveillance to perpetuate bias and corrupt political systems or how it may diminish the middle class and render a country's lower class workers as unemployed, it is important to understand the benefits this technology can add to an ecosystem and economy when used responsibly.
 In the public service sector, a myriad of new AI technologies is being implemented including advancing the availability of education, detecting fraud, triaging health care needs, making payments to welfare recipients, speeding immigration decisions, planning and implementation of large urban and industrial infrastructure projects and most importantly, it can reduce costs.
-A great write up titled “The economics of artificial intelligence” outlines five imperatives for harnessing the power of low-cost prediction, I’ve paraphrased their descriptions slightly to be applicable to Governments rather than Corporations.
+A great write up titled ``The economics of artificial intelligence'' outlines five imperatives for harnessing the power of low-cost prediction, I've paraphrased their descriptions slightly to be applicable to Governments rather than Corporations.
 Five Imperatives for Harnessing the Power of Low-Cost Prediction
 Develop a thesis on time to AI impact--How fast do I think the implementation, demand, and accuracy of prediction will increase for a particularly valuable AI application in my sector?
 Recognize that AI progress will likely be exponential--Once appropriate data collection, processing, and prediction tools are in place for Government services, understand that progress and impact will be exponential rather than linear.
 Trust the machines--Where AIs have demonstrated superior performance in prediction, governments must carefully consider the conditions under which to empower humans to exercise their discretion to override the AI.
 Know what you want to predict--AI effectiveness is directly tied to goal-specification clarity, so knowing your desired outcomes, whether that be reducing crime rates, increasing the availability of healthcare and education, increasing employment, or reducing government overspending.
 Manage the learning loop--Governments need to ensure that information flows into decisions, they follow decisions to an outcome, and then they learn from the outcome and feed that learning back into the system.
-The use of AI technology can actually transform the role of governments, making them better able to serve the population. As governments of developing countries continue to shift to more advanced digital platforms, they have added control over the data being collected on their citizens and how that data may be used to benefit society. Since data is the “new gold”, governments also have a responsibility to their citizens to ensure this information is being mined in the least invasive manner while still creating value for the economy.
-In follow-up posts, I’ll dive deeper into each Latin American country’s economy, current AI research and development in public and private sectors including growth of startups, industrial automation potential, risks, and benefits, that could pave a way forward for LatinX in AI.
+The use of AI technology can actually transform the role of governments, making them better able to serve the population. As governments of developing countries continue to shift to more advanced digital platforms, they have added control over the data being collected on their citizens and how that data may be used to benefit society. Since data is the ``new gold'', governments also have a responsibility to their citizens to ensure this information is being mined in the least invasive manner while still creating value for the economy.
+In follow-up posts, I'll dive deeper into each Latin American country's economy, current AI research and development in public and private sectors including growth of startups, industrial automation potential, risks, and benefits, that could pave a way forward for LatinX in AI.
 
 
 
@@ -720,87 +325,21 @@ Appendix two text goes here.
 The authors would like to thank...
 
 
-% Can use something like this to put references on a page
-% by themselves when using endfloat and the captionsoff option.
-\ifCLASSOPTIONcaptionsoff
-  \newpage
-\fi
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,refs}
 
-
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IEEEtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IEEEtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
-% The IEEEtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
-
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-\end{thebibliography}
-
-% biography section
-% 
-% If you have an EPS/PDF photo (graphicx package needed) extra braces are
-% needed around the contents of the optional argument to biography to prevent
-% the LaTeX parser from getting confused when it sees the complicated
-% \includegraphics command within an optional argument. (You could create
-% your own custom macro containing the \includegraphics command to make things
-% simpler here.)
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
-\begin{IEEEbiography}{Michael Shell}
+\begin{IEEEbiography}{Laura Montoya}
 Biography text here.
 \end{IEEEbiography}
 
-% if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
+\begin{IEEEbiography}{Pablo Rivas}
 Biography text here.
-\end{IEEEbiographynophoto}
-
-% insert where needed to balance the two columns on the last page with
-% biographies
-%\newpage
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% You can push biographies down or up by placing
-% a \vfill before or after them. The appropriate
-% use of \vfill depends on what kind of text is
-% on the last page and whether or not the columns
-% are being equalized.
-
-%\vfill
-
-% Can be used to pull up biographies so that the bottom of the last one
-% is flush with the other column.
-%\enlargethispage{-5in}
+\end{IEEEbiography}
 
 
-
-% that's all folks
 \end{document}
 
 
