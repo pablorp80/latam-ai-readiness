@@ -30,10 +30,10 @@ Pablo.Rivas@Marist.edu}
 
 \maketitle
 
-% As a general rule, do not put math, special symbols or citations
-% in the abstract or keywords.
 \begin{abstract}
-The abstract goes here.
+Artificial intelligence-based technology has the potential of transforming how governments function, making them better able to serve their constituents. As governments of developing countries continue to shift to more advanced digital platforms, they have adopted practices and policies that... 
+
+In this paper we discussed the key factors that play an important role in the AI readiness of LATAM countries that will need to embrace the AI revolution very soon.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -142,13 +142,16 @@ This requires closer examination of LATAM particularities that may affect the po
 At first glance, these rankings appear intuitive, but it was surprising to find they did not account for each countries population size, unemployment rate, income equality, household income, education index, or GDP. These metrics are far more telling of a government and its citizen's ability to invest in or make use of new technology and its potential effects on the population. We will now compare these values to better assess the real risks and potential for integrating artificial intelligence in Latin America.
 
 \subsection{Unemployment Rate}
-The unemployment rate, published by the International Monetary Fund (IMF), is the number of unemployed persons as a percentage of the total labor force sourced from the World Economic Outlook in 2019~\cite{nam2019world}. Fig. \ref{fig:unemployment} shows the AI readiness index in comparison with the unemployment rate. 
-\begin{figure*}[!t]
+
+\begin{figure}[!t]
 \centering
-\includegraphics[width=\textwidth]{unemployment}
+\includegraphics[width=\columnwidth]{unemployment}
 \caption{Government AI readiness vs unemployment rate. Comparison produced by LatinX in AI\texttrademark. Data sources are ~\cite{miller2019government} and~\cite{nam2019world}.}
 \label{fig:unemployment}
-\end{figure*}
+\end{figure}
+
+The unemployment rate, published by the International Monetary Fund (IMF), is the number of unemployed persons as a percentage of the total labor force sourced from the World Economic Outlook in 2019~\cite{nam2019world}. Fig. \ref{fig:unemployment} shows the AI readiness index in comparison with the unemployment rate. 
+
 Unemployment in developing countries is often telling of a countries economy but can also be an indicator of factors outside of a government's control. Areas with conflict may see an increase in migration as refugees flee, causing unemployment rates to spike temporarily including in neighboring cities or countries.
 
 This can be seen most clearly in Venezuela, where the unemployment rate has jumped from 6\% in 2015 to 44\% in 2019. ``Venezuela's fall is the single largest economic collapse outside of war in at least 45 years'' according to economists and others who acknowledge it is the largest refugee crisis of all time in Latin America~\cite{kurmanaev2019venezuela}. In countries like Venezuela, which used to have a thriving economy largely based on petroleum export and manufacturing, the opportunities for incorporating Artificial Intelligence were endless. Unfortunately now, due to government mismanagement, extensive surveillance and biometric data collection (similar to China's communist regime)~\cite{berwick2018how}, coupled with hyperinflation, some say the countries economy may never recover.
@@ -181,211 +184,102 @@ As can be seen in  Fig.~\ref{fig:gdp-ppp}, countries with high GDP-PPP may not s
 
 Interestingly, some countries with low GDP-PPP rank higher on the Government AI Readiness Index possibly due to a growing or diversified economy combined with technological skills and data protection policies. However, countries such as Ecuador, Peru, Colombia, Brazil, Costa Rica, and the Dominican Republic score above the global average of 4.032 on the Government AI Readiness Index and yet they have historically low GDP-PPP.
 
-Ecuador is the 8th largest economy in Latin America with its main industries being petroleum, food processing, textiles, wood products, chemicals —and it is also the world's largest exporter of bananas. At a UN Summit in 2014, Ecuador was one of only five countries who called for a preemptive ban on fully autonomous weapons and in late 2017, in an effort to encourage investment in the region, the National Directorate for the Registration of Public Data in Ecuador (DINARDAP), began drafting the first Ecuadorian law which would implement regulations in order to protect public personal data. Despite these proclamations for privacy and protection, Ecuador has also implemented a nationwide surveillance and response system called ECU 911, funded by China, and making use of controversial facial recognition technology while promoting its benefits for enforcing traffic laws and reducing crime incidents.
-Colombia is the 4th largest economy in Latin America, and the fastest growing globally, following China, thanks to its most thriving sectors including construction, services, and agriculture. Its other main industries include textiles, food processing, oil, clothing and footwear, beverages, chemicals, cement, gold, coal, emeralds, shipbuilding, electronics industry, and home appliances. Colombia also has the fastest growing information technology industry in the world and the longest fiber optic network in Latin America, installed by Azteca Co. in 2013.
-While Colombia is lacking an official AI strategy, it has some of the most thorough data privacy laws in South America inspired by European data protection regulations. These laws and decrees, enacted between 2008 and 2014, protect its citizens by regulating the use of financial and commercial personal data in credit scoring, they also govern data processing, establish the rights of data subjects and duties of data controllers and processors, set forth requirements for international data transfers, created the National Registry of Databases and designates the Superintendence of Industry and Commerce (SIC) as the data protection authority. In 2018, the first Centre for Excellence in Artificial Intelligence was opened in Medellin, the country's second largest city, as part of the Digital Americas Pipeline Initiative (DAPI), a collaboration between Ruta N, the center of business and innovation of Medellín and IRPA AI (The Institute for Robotic Process Automation and Artificial Intelligence).
-An analogy most often used to explain GDP-PPP is the Big Mac Index, which compares the price of a Big Mac in different countries in order to illustrate currencies which may be under or overvalued in purchasing power as compared to the local exchange rate. For our purposes, it would be a fruitful undertaking to explore the difference in purchasing power for an AI product and the difference in cost to develop AI across countries, but an in-depth exploration of these questions would merit a write up of its own. We'll use a simple proxy in the interim, the cost to hire AI researchers.
-Comparing the Cost to Hire an AI Researcher
-The cost to hire an AI Researcher is the most telling comparable metric that governments funding research and development would need to consider in the integration of AI into their policies, products, and services. In the US, salaries of software engineers, data scientists, and researchers skilled in artificial intelligence techniques range between \$100,000-\$150,000 according to PayScale. These averages increase in densely populated or competitive markets like New York and San Francisco. While highly credentialled and ``well-known names in the A.I. field have received compensation in salary and shares in a company's stock that total single- or double-digit millions over a four- or five-year period.''
-Alternatively, in Latin America, the cost to hire engineers and researchers is significantly lower ranging between \$15,000 and \$30,000 dependent on years of experience and specialization. According to a 2018 Latin American Developer Survey conducted by Stack Overflow, engineers with some experience in Machine Learning or Data Science still tend to receive higher compensation. Since the job title of Artificial Intelligence engineer and researcher is only beginning to gain popularity, this is the best available historical data to show the average compensation equivalencies by comparison.
-Source: ``Hiring Developers in Latin America'' by Julia Silge on Stack Overflow Business Journal
-Education
-According to the Stack Overflow study, Latin American countries also seem to produce more academic researchers than general software engineers as compared to the rest of the world.
-Source: ``Hiring Developers in Latin America'' by Julia Silge on Stack Overflow Business Journal
-While the Government AI Readiness Index by Oxford and the IDRC, account for technological skills, they do not look at the overall Education level of a country. The education index is an average of mean years of schooling (of adults) and expected years of schooling (of children), both expressed as an index obtained by scaling with the corresponding maxima. Published by the United Nations Development Program their calculations are developed from data by UNESCO Institute for Statistics (2018) and other sources.
-Comparison chart by LatinX in AI\texttrademark, Data sources: Government AI Readiness Index (Oxford \& IDRC), Education Index (UNDP)
-While most Latin American countries rate highly on the education index, many Latin American and Caribbean governments do not invest enough in university research and development. This coupled with unattractive pay, prestige, and working conditions leads to ``Brain Drain'' where the highly skilled or educated leave their country of origin. This phenomenon makes it harder for Universities in those countries to reach their research potential and limits the access to quality scientific research mentors available to share knowledge to incoming students.
-A report from Americas Quarterly in 2014 cited data from Mexico's National Council of Science and Technology indicating that 1,271 of the 4,559 Mexicans (28\%) working on master's degrees or Ph.D.s abroad in 2012 were doing so in the US. That's one of every 19 Mexicans with a bachelor's degree or higher living in the US.
-In Argentina, scientists often strike to protest budget cuts to research and development. The directors of the National Scientific and Technical Research Council (CONICET), headquartered in Buenos Aires, which employs more than 20,000 researchers in hundreds of centers throughout the country are also fighting the cuts. They created a manifesto demanding ``the immediate implementation of a plan to rescue CONICET.''
+Ecuador is the 8th largest economy in Latin America with its main industries being petroleum, food processing, textiles, wood products, chemicals, and it is also the world's largest exporter of bananas~\cite{rivera2017synergies}. At a UN Summit in 2014~\cite{jeffries2014only}, Ecuador was one of only five countries who called for a preemptive ban on fully autonomous weapons and in late 2017, in an effort to encourage investment in the region, the National Directorate for the Registration of Public Data in Ecuador (DINARDAP), began drafting the first Ecuadorian law which would implement regulations in order to protect public personal data. But contrary to these proclamations for privacy and protection, Ecuador has also implemented a nationwide surveillance and response system called ECU 911, funded by China, and making use of controversial facial recognition technology while promoting its benefits for enforcing traffic laws and reducing crime incidents \cite{corral2018911}.
 
-Latin American Automation Potential \& Risks
-All of these metrics can still only tell part of the story when it comes to a country and its citizen's preparedness for Artificial Intelligence. You can't predict an economies readiness for AI without including metrics for automation. Several reports have been published in the last five years by experts including the McKinsey Global Institute, the Economist Intelligence Unit, and the International Federation on Robotics, to name a few.
-The International Federation of Robotics has been tracking and forecasting the rise of robot density globally for use in manufacturing and affiliated industries. In their 2018 Executive Summary on World Robotics, they noted that Mexico has become an important emerging market for industrial robots outpacing the rest of South America, including Brazil.
-International Federation of Robotics--2018 Industrial Robots Executive Summary
+Colombia is the 4th largest economy in Latin America, and the fastest growing globally, following China, thanks to its most thriving sectors including construction, services, and agriculture \cite{giraldo2019commodity}. Its other main industries include textiles, food processing, oil, clothing and footwear, beverages, chemicals, cement, gold, coal, emeralds, shipbuilding, electronics industry, and home appliances. Colombia also has the fastest growing information technology industry in the world and the longest fiber optic network in Latin America, installed by Azteca Co. in 2013.
+
+While Colombia is lacking an official AI strategy, it has some of the most thorough data privacy laws in South America inspired by European data protection regulations. These laws and decrees, enacted between 2008 and 2014 \cite{piper2016data}, protect its citizens by regulating the use of financial and commercial personal data in credit scoring, they also govern data processing, establish the rights of data subjects and duties of data controllers and processors, set forth requirements for international data transfers, created the National Registry of Databases and designates the Superintendence of Industry and Commerce (SIC) as the data protection authority. In 2018, the first Centre for Excellence in Artificial Intelligence was opened in Medellin, the country's second largest city, as part of the Digital Americas Pipeline Initiative (DAPI), a collaboration between Ruta N, the center of business and innovation of Medellín and IRPA AI: \emph{The Institute for Robotic Process Automation and Artificial Intelligence}.
+
+An analogy most often used to explain GDP-PPP is the Big Mac Index \cite{o2017adjusted}, which compares the price of a Big Mac in different countries in order to illustrate currencies which may be under or overvalued in purchasing power as compared to the local exchange rate. In the next paragraphs, we will use the cost to hire AI researchers as a similar indicator.
+
+
+\subsection{Comparing the Cost to Hire an AI Researcher}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{aisalary}
+\caption{Experience vs Salary from data  in~\cite{silge2018hiring}. The results indicate that experience is a highly predictive of salary. The diameter of the circles is proportional to the sample size.}
+\label{fig:salary}
+\end{figure}
+%TODO This figure needs to be re-done by ourselves, or check with Julia Silge on the copy-right or public domain status
+
+
+The cost to hire an AI Researcher is the most telling comparable metric that governments funding research and development would need to consider in the integration of AI into their policies, products, and services. In the U.S., salaries of software engineers, data scientists, and researchers skilled in artificial intelligence techniques range between \$100,000 and \$150,000 according to PayScale.\footnote{https://www.payscale.com} These averages increase in densely populated or competitive markets like New York and San Francisco. While highly credentialed and ``well-known names in the A.I. field have received compensation in salary and shares in a company's stock that total single -or double- digit millions over a four -or five- year period''~\cite{metz2017tech}.
+
+Alternatively, in Latin America, the cost to hire engineers and researchers is significantly lower ranging between \$15,000 and \$30,000 dependent on years of experience and specialization. According to a 2018 Latin American Developer Survey conducted by Stack Overflow~\cite{silge2018hiring}, engineers with some experience in Machine Learning or Data Science still tend to receive higher compensation, as shown in Fig.~\ref{fig:salary}. Since the job title of Artificial Intelligence engineer and researcher is only beginning to gain popularity, this is the best available historical data to show the average compensation equivalencies by comparison.
+
+
+\subsection{Education}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{education}
+\caption{Government AI readiness vs Education. Data sources are~\cite{miller2019government} and~\cite{undp2018education}.}
+\label{fig:education}
+\end{figure}
+
+According to the Stack Overflow study in \cite{silge2018hiring}, Latin American countries also seem to produce more academic researchers than general software engineers as compared to the rest of the world. While the Government AI Readiness Index by Oxford and the IDRC \cite{miller2019government}, account for technological skills, they do not look at the overall Education level of a country. Thus, an adequate assessment tool can be the education index published by the United Nations Development Programme~\cite{undp2018education}. Fig.~\ref{fig:education} depicts a comparison of both AI readiness index and education index.
+
+The education index in~\cite{undp2018education}, is an average of mean years of schooling (of adults) and expected years of schooling (of children), both expressed as an index obtained by scaling with the corresponding maxima. The comparison chart by LatinX in AI\texttrademark, shown in Fig.~\ref{fig:education} shows no apparent relationship between the two variables. 
+
+While most Latin American countries rate highly on the education index, many Latin American and Caribbean governments do not invest enough in university research and development. This coupled with unattractive pay, prestige, and working conditions leads to ``Brain Drain'' where the highly skilled or educated leave their country of origin. This phenomenon makes it harder for universities in those countries to reach their research potential and limits the access to quality scientific research mentors available to share knowledge to incoming students.
+
+A report from Americas Quarterly, in 2014 \cite{velasco2014academic}, cited data from Mexico's National Council of Science and Technology (CONACYT) indicating that 1,271 of the 4,559 Mexicans (28\%) working on master's degrees or Ph.D.s abroad in 2012 were doing so in the US. That is one of every 19 Mexicans with a bachelors degree or higher living in the US.
+
+In Argentina, scientists often strike to protest budget cuts to research and development \cite{debat2019plan}. The directors of the National Scientific and Technical Research Council (CONICET), headquartered in Buenos Aires, which employs more than 20,000 researchers in hundreds of centers throughout the country are also fighting the cuts. They created a manifesto demanding ``the immediate implementation of a plan to rescue CONICET.''
+
+
+\section{Latin American Automation Potential \& Risks}
+
+All of these metrics scrutinized and presented here can still only tell part of the story when it comes to a country and its citizen's preparedness for Artificial Intelligence. You cannot predict an nation's readiness for AI without including metrics for automation. Several reports have been published in the last five years by experts including the McKinsey Global Institute, the Economist Intelligence Unit, and the International Federation on Robotics (IFR), to name a few.
+
+The IFR has been tracking and forecasting the rise of robot density globally for use in manufacturing and affiliated industries. In their 2018 Executive Summary on World Robotics \cite{robotics2016executive}, they noted that Mexico has become an important emerging market for industrial robots outpacing the rest of South America, including Brazil.
+
 The use of AI and automation applied to industries such as manufacturing and agriculture could help to leapfrog a developing countries economy. Countries with a growing young workforce could use these technologies to their advantage in furthering economic development with the right education.
-These days, manufacturing with robotics is no longer the largest concern when describing the automation potential and its effects on an economy. Shifts in business processes and software intelligence through automation of data collection and processing will have a larger impact, especially in Latin America. In 2017, the McKinsey Global Institute published its executive summary on ``Harnessing automation for a future that works''.
-McKinsey Global Institute--A future that works: Automation, employment, and productivity
-They've listed the countries where the potential for automation is highest by adapting current technologies. Of the Latin American countries they included in their study(countries with the largest population or high wages), Peru and Colombia have the highest automation potential at ≥53\%, Brazil, Mexico, and Costa Rica the next highest ≥ 50\% followed closely by Chile, Barbados, and Argentina ≥ 48\%.
-McKinsey Global Institute--A future that works: Automation, employment, and productivity
-Automation Readiness Index
-Meanwhile, the Economist Intelligence Unit developed their own Automation Readiness Index, accompanied by a white paper and executive summary titled ``Who is ready for the coming wave of automation''. Their index, similarly to that of the IDRC and Oxford Insights, categorized metrics under 3 high-level topics including:
-Innovation Environment--including indicators for research and innovation, infrastructure, and ethics and safety.
-Education Policies--including indicators for basic education, post-compulsory education, continuous education, and learning environments.
-Labour Market Policies--including indicators for knowledge on automation and workforce transition programs.
-The Economist Intelligence Unit--Automation Readiness Index
-They conclude their report by comparing the global use of automation and AI technology to trial and error. Reinforcing the sentiment that ``supporting basic research, clearing the way for start-ups and ensuring competitive markets are likely to be as helpful to AI and robotics innovation as they have been for past technology advances''...while, ``policy directions for education systems and labor markets are less clear for the moment, as the effect of intelligent automation have yet to be widely felt''.
-Incorporation of AI into industries through automation which currently relies on a large blue-collar workforce always leads to the concerns of increased unemployment, decreased GPD-PPP, increased migration, and population redistribution or density in city centers, gaps in education for highly technical skills, and increased income inequality between upper and lower class citizens. Most economists say these effects are temporary as the markets shifts and new jobs are developed to support the growth of AI economies, but governments will have to do their part in ensuring their citizens have access to education and opportunities for investment.
 
-How can AI help Latin American Governments and citizens?
+These days, manufacturing with robotics is no longer the largest concern when describing the automation potential and its effects on an economy. Shifts in business processes and software intelligence through automation of data collection and processing will have a larger impact, especially in Latin America. In 2017, the McKinsey Global Institute published its executive summary on ``Harnessing automation for a future that works'' \cite{manyika2017future}. In this report, they have listed the countries where the potential for automation is highest by adapting current technologies. Of the Latin American countries they included in their study (\emph{i.e.} countries with the largest population or high wages), Peru and Colombia have the highest automation potential at $\geq 53\%$, Brazil, Mexico, and Costa Rica the next highest $\geq 50\%$ followed closely by Chile, Barbados, and Argentina $\geq 48\%$. Meanwhile, the Economist Intelligence Unit (EIU) developed their own Automation Readiness Index \cite{unit2018automation}, which we discuss next.
+
+
+\subsection{On The Automation Readiness Index}
+
+In 2018, the EIU developed their own Automation Readiness Index accompanied by a white paper and executive summary titled ``Who is ready for the coming wave of automation''~\cite{unit2018automation}. Their index, similarly to that of the IDRC and Oxford Insights, categorized metrics under 3 high-level topics including:
+\begin{itemize}
+  \item \emph{Innovation Environment:} including indicators for research and innovation, infrastructure, and ethics and safety.
+  \item \emph{Education Policies:} including indicators for basic education, post-compulsory education, continuous education, and learning environments.
+  \item \emph{Labour Market Policies:} including indicators for knowledge on automation and workforce transition programs.
+\end{itemize}
+
+The authors conclude their report by comparing the global use of automation and AI technology to trial and error. Reinforcing the sentiment that ``supporting basic research, clearing the way for start-ups and ensuring competitive markets are likely to be as helpful to AI and robotics innovation as they have been for past technology advances'' ... while, ``policy directions for education systems and labor markets are less clear for the moment, as the effect of intelligent automation have yet to be widely felt.''
+
+Consequently, incorporation of AI into industries through automation which currently relies on a large blue-collar workforce will lead to concerns of increased unemployment, decreased GPD-PPP, increased migration, and population redistribution or density in city centers, gaps in education for highly technical skills, and increased income inequality between upper and lower class citizens. Most economists say these effects are temporary as the markets shifts and new jobs are developed to support the growth of AI economies~\cite{manyika2017future,intelligence2016automation,manyika2017jobs}, but governments will have to do their part in ensuring their citizens have access to education and opportunities for investment.
+
+
+\section{Discussion: How Can AI Help Latin American Governments And Citizens?}
+
 Rather than just stressing how AI can be misused by government entities for surveillance to perpetuate bias and corrupt political systems or how it may diminish the middle class and render a country's lower class workers as unemployed, it is important to understand the benefits this technology can add to an ecosystem and economy when used responsibly.
-In the public service sector, a myriad of new AI technologies is being implemented including advancing the availability of education, detecting fraud, triaging health care needs, making payments to welfare recipients, speeding immigration decisions, planning and implementation of large urban and industrial infrastructure projects and most importantly, it can reduce costs.
-A great write up titled ``The economics of artificial intelligence'' outlines five imperatives for harnessing the power of low-cost prediction, I've paraphrased their descriptions slightly to be applicable to Governments rather than Corporations.
-Five Imperatives for Harnessing the Power of Low-Cost Prediction
-Develop a thesis on time to AI impact--How fast do I think the implementation, demand, and accuracy of prediction will increase for a particularly valuable AI application in my sector?
-Recognize that AI progress will likely be exponential--Once appropriate data collection, processing, and prediction tools are in place for Government services, understand that progress and impact will be exponential rather than linear.
-Trust the machines--Where AIs have demonstrated superior performance in prediction, governments must carefully consider the conditions under which to empower humans to exercise their discretion to override the AI.
-Know what you want to predict--AI effectiveness is directly tied to goal-specification clarity, so knowing your desired outcomes, whether that be reducing crime rates, increasing the availability of healthcare and education, increasing employment, or reducing government overspending.
-Manage the learning loop--Governments need to ensure that information flows into decisions, they follow decisions to an outcome, and then they learn from the outcome and feed that learning back into the system.
-The use of AI technology can actually transform the role of governments, making them better able to serve the population. As governments of developing countries continue to shift to more advanced digital platforms, they have added control over the data being collected on their citizens and how that data may be used to benefit society. Since data is the ``new gold'', governments also have a responsibility to their citizens to ensure this information is being mined in the least invasive manner while still creating value for the economy.
-In follow-up posts, I'll dive deeper into each Latin American country's economy, current AI research and development in public and private sectors including growth of startups, industrial automation potential, risks, and benefits, that could pave a way forward for LatinX in AI.
 
+In the public service sector, a myriad of new AI technologies is being implemented including advancing the availability of education, detecting fraud, triaging health care needs, making payments to welfare recipients, speeding immigration decisions, planning and implementation of large urban and industrial infrastructure projects and most importantly: it can reduce costs.
 
+A great write up on the economics of artificial intelligence outlines five imperatives for harnessing the power of low-cost prediction \cite{agrawal2018economics}; here we have rephrased them and applied them to governments rather than leaving them in their original connotation that was intended for corporations. 
 
-
-
-\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter file''
-for IEEE journal papers produced under \LaTeX\ using
-IEEEtran.cls version 1.8b and later.
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
-
-\hfill mds
- 
-\hfill August 26, 2015
-
-\subsection{Subsection Heading Here}
-Subsection text here.
-
-% needed in second column of first page if using \IEEEpubid
-%\IEEEpubidadjcol
-
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
-
-
-% An example of a floating figure using the graphicx package.
-% Note that \label must occur AFTER (or within) \caption.
-% For figures, \caption should occur after the \includegraphics.
-% Note that IEEEtran v1.7 and later has special internal code that
-% is designed to preserve the operation of \label within \caption
-% even when the captionsoff option is in effect. However, because
-% of issues like this, it may be the safest practice to put all your
-% \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=2.5in]{myfigure}
-% where an .eps filename suffix will be assumed under latex, 
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation results for the network.}
-%\label{fig_sim}
-%\end{figure}
-
-% Note that the IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-
-
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command,
-% and the \label for the overall figure must come after \caption.
-% \hfil is used as a separator to get equal spacing.
-% Watch out that the combined width of all the subfigures on a 
-% line do not exceed the text width or a line break will occur.
-%
-%\begin{figure*}[!t]
-%\centering
-%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
-%\label{fig_second_case}}
-%\caption{Simulation results for the network.}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat[]), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
-% labels, the optional argument to \subfloat must be present. If a
-% subcaption is not desired, just leave its contents blank,
-% e.g., \subfloat[].
-
-
-% An example of a floating table. Note that, for IEEE style tables, the
-% \caption command should come BEFORE the table and, given that table
-% captions serve much like titles, are usually capitalized except for words
-% such as a, an, and, as, at, but, by, for, in, nor, of, on, or, the, to
-% and up, which are usually not capitalized unless they are the first or
-% last word of the caption. Table text will default to \footnotesize as
-% the IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
-
-
-% Note that the IEEE does not put floats in the very first column
-% - or typically anywhere on the first page for that matter. Also,
-% in-text middle ("here") positioning is typically not used, but it
-% is allowed and encouraged for Computer Society conferences (but
-% not Computer Society journals). Most IEEE journals/conferences use
-% top floats exclusively. 
-% Note that, LaTeX2e, unlike IEEE journals/conferences, places
-% footnotes above bottom floats. This can be corrected via the
-% \fnbelowfloat command of the stfloats package.
-
-
+Here are the \emph{five imperatives for harnessing the power of low-cost prediction} and a brief description of each:
+\begin{enumerate}
+  \item \emph{Develop a thesis on time to AI impact:} How fast do I think the implementation, demand, and accuracy of prediction will increase for a particularly valuable AI application in my sector?
+  \item \emph{Recognize that AI progress will likely be exponential:} Once appropriate data collection, processing, and prediction tools are in place for Government services, understand that progress and impact will be exponential rather than linear.
+  \item \emph{Trust the machines:} Where AIs have demonstrated superior performance in prediction, governments must carefully consider the conditions under which to empower humans to exercise their discretion to override the AI.
+  \item \emph{Know what you want to predict:} AI effectiveness is directly tied to goal-specification clarity, so knowing your desired outcomes, whether that be reducing crime rates, increasing the availability of healthcare and education, increasing employment, or reducing government overspending.
+  \item \emph{Manage the learning loop:} Governments need to ensure that information flows into decisions, they follow decisions to an outcome, and then they learn from the outcome and feed that learning back into the system.
+\end{enumerate}
 
 
 \section{Conclusion}
-The conclusion goes here.
+
+The use of AI technology can actually transform the role of governments, making them better able to serve the population. As governments of developing countries continue to shift to more advanced digital platforms, they have added control over the data being collected on their citizens and how that data may be used to benefit society. Since data is the ``new gold'', governments also have a responsibility to their citizens to ensure this information is being mined in the least invasive manner while still creating value for the economy.
+
+In this paper we discussed the key factors that play an important role in the AI readiness of LATAM countries that will need to embrace the AI revolution very soon. If we fail to do so, we will be a the risk of affecting a global economies that rely heavily in an AI revolution that changes faster than what LATAM countries can are able and willing to follow. By exposing all these issues and existing efforts for exposing such struggles and difficulties, we hope that the reader can urge conversations with policy makers, ethical standards committees, and the broader scientific community with ties to AI, to pursue a unified effort to move forward and to reduce the knowledge gap among LATAM scientific interdisciplinary efforts.
 
 
-
-
-
-% if have a single appendix:
-%\appendix[Proof of the Zonklar Equations]
-% or
-%\appendix  % for no appendix heading
-% do not use \section anymore after \appendix, only \section*
-% is possibly needed
-
-% use appendices with more than one appendix
-% then use \section to start each appendix
-% you must declare a \section before using any
-% \subsection or using \label (\appendices by itself
-% starts a section numbered zero.)
-%
-
-
-\appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
-
-% you can choose not to have a title for an appendix
-% if you want by leaving the argument blank
-\section{}
-Appendix two text goes here.
-
-
-% use section* for acknowledgment
 \section*{Acknowledgment}
-
 
 The authors would like to thank...
 
@@ -393,15 +287,17 @@ The authors would like to thank...
 \bibliographystyle{IEEEtran}
 \bibliography{IEEEabrv,refs}
 
-%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
-% or if you just want to reserve a space for a photo:
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{laura}}]{Laura Montoya}
+is the Founder and Managing Partner of Accel Impact, which includes Accel.AI, a global Non-Profit Institute lowering the barriers to entry in engineering artificial intelligence, and the LatinX in AI Coalition an initiative to create opportunity for LatinX in AI. She has been described as a natural and versatile leader with a passion for AI, Computer Science, Research, and Psychology. 
 
-\begin{IEEEbiography}{Laura Montoya}
-Biography text here.
+She has a Bachelors of Science in Biology, Physical Science, and Human Development. She jumpstarted her career in software engineering at Intuit revamping their Quickbooks online platform. She is a Director with Women Who Code, a global non-profit dedicated to inspiring women to excel in technology careers.
+%TODO write a better bio (stole this from your site). Use this for inspiration: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4227760
 \end{IEEEbiography}
 
-\begin{IEEEbiography}{Pablo Rivas}
-Biography text here.
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{pablo}}]{Pablo Rivas}
+is an Assistant Professor of Computer Science in the School of Computer Science and Mathematics at Marist College in Poughkeepsie, New York.  He worked in the industry for a decade as a software engineer before becoming an academic. He is a Senior Member of the IEEE, ACM, and SIAM. He was formerly at NASA Goddard Space Flight Center, and at Baylor University performing post-doctoral research and teaching. Ph.D. and Post-Doc from the University of Texas at El Paso ('11) and Baylor University ('15), respectively.
+
+He considers himself an ally of women in computing, a deep learning evangelist, and a machine learning ethicist. He teaches ethics, machine learning, and deep learning courses with applications in natural language processing and computer vision. Dr. Rivas has papers related to machine learning, computer vision, and AI ethics; and he is also a machine learning consultant of the New York State Cloud Computing and Analytics Center. Prof. Rivas prefers Vim over Emacs and spaces over tabs.
 \end{IEEEbiography}
 
 
